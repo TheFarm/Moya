@@ -15,11 +15,11 @@ let package = Package(
         .library(name: "ReactiveMoya", targets: ["ReactiveMoya"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.0.0")),
-        .package(url: "https://github.com/Moya/ReactiveSwift.git", .upToNextMajor(from: "6.1.0")),
+        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.4.1")),
+        .package(url: "https://github.com/ReactiveCocoa/ReactiveSwift.git", .upToNextMajor(from: "6.5.0")),
     ],
     targets: [
-        .target(name: "Moya", dependencies: ["Alamofire"]),
+        .target(name: "Moya", dependencies: ["Alamofire"], exclude: ["Info.plist"]),
         .target(name: "ReactiveMoya", dependencies: ["Moya", "ReactiveSwift"]),
     ]
 )

@@ -19,7 +19,7 @@ let package = Package(
         .package(url: "https://github.com/ReactiveCocoa/ReactiveSwift.git", .upToNextMajor(from: "6.5.0")),
     ],
     targets: [
-        .target(name: "Moya", dependencies: ["Alamofire"], exclude: ["Info.plist"]),
+        .target(name: "Moya", dependencies: ["Alamofire"], exclude: ["Supporting Files/Info.plist"]),
         .target(name: "ReactiveMoya", dependencies: ["Moya", "ReactiveSwift"]),
     ]
 )
